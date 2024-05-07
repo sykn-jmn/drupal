@@ -90,7 +90,7 @@ spec:
               protocol: TCP
           envFrom:
             - secretRef:
-                name: {{ include "lab05.fullname" . }}-secret
+                name: '{{ include "lab05.name" . }}-secret'
           volumeMounts:
             - name: empty-dir
               mountPath: /opt/bitnami/apache/conf
